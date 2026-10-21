@@ -7,7 +7,7 @@ def check_snake_or_ladder(name : str,position : int) -> int:
     pre =position
     if position in snake_pos :
         position=snake_pos[position]
-        print(f"{name} came a from {pre} to {position}")
+        print(f"{name} came a from  {pre} to {position}")
         return position
     if position in ladder_pos:
         position = ladder_pos[position]

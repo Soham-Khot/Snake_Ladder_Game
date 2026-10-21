@@ -1,7 +1,8 @@
-import roll_dice 
+import roll_dice
+import display_positon
+import check_snake_or_ladder
 import move_position
-import check_snake_or_ladder 
-import display_positon 
+
 def play_game():
     """main fun to start game"""
     turn = 1
@@ -9,7 +10,7 @@ def play_game():
     while True:
         """run util user first give valid name"""
         player_1 = input("Enter first player name : ")
-        if not "".join(player_1.split()).isalpha():
+        if not "".join(player_1.strip().split()).isalpha():
             print("Enter valid name!!")
             continue
         break;
@@ -18,7 +19,7 @@ def play_game():
     while True:
         """run util user second give valid name"""
         player_2 = input("Enter Second player name : ")
-        if not "".join(player_2.split()).isalpha():
+        if not "".join(player_2.strip().split()).isalpha():
             print("Enter valid name!!")
             continue
         break;
