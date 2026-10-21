@@ -1,10 +1,7 @@
 import roll_dice 
 import move_position
 import check_snake_or_ladder 
-def display_position(name : str,position : int)-> None:
-    print(f"{name} is at position {position}")
-
-
+import display_positon 
 def play_game():
     """main fun to start game"""
     turn = 1
@@ -36,7 +33,7 @@ def play_game():
             player_1_pos = move_position.move_player(player_1_pos,current_roll)
             # print(f"{player_1} == {player_1_pos}")
             player_1_pos = check_snake_or_ladder.check_snake_or_ladder(player_1,player_1_pos)
-            display_position(player_1,player_1_pos)
+            display_positon.display_position(player_1,player_1_pos)
             if player_1_pos == 100:
                 print(f"{player_1} Won the Game!!!!!")
                 break;
@@ -47,7 +44,7 @@ def play_game():
             player_2_pos = move_position.move_player(player_2_pos,current_roll)
             # print(f"{player_2} == {player_2_pos}")
             player_2_pos = check_snake_or_ladder.check_snake_or_ladder(player_2,player_2_pos)
-            display_position(player_2,player_2_pos)
+            display_positon.display_position(player_2,player_2_pos)
             if player_2_pos == 100:
                 print(f"{player_2} Won the Game!!!!")
                 break;
